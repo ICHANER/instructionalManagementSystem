@@ -1,5 +1,5 @@
 using System;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 
 
 namespace WinFormsApp2_C_
@@ -17,6 +17,11 @@ namespace WinFormsApp2_C_
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
