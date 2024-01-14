@@ -63,7 +63,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            label1.Location = new Point(81, 59);
+            label1.Location = new Point(85, 62);
             label1.Name = "label1";
             label1.Size = new Size(42, 21);
             label1.TabIndex = 2;
@@ -75,7 +75,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            label2.Location = new Point(81, 98);
+            label2.Location = new Point(85, 105);
             label2.Name = "label2";
             label2.Size = new Size(42, 21);
             label2.TabIndex = 3;
@@ -84,7 +84,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            textBox1.Location = new Point(142, 52);
+            textBox1.Location = new Point(133, 59);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(145, 28);
             textBox1.TabIndex = 4;
@@ -92,7 +92,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            textBox2.Location = new Point(142, 91);
+            textBox2.Location = new Point(133, 98);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(145, 28);
             textBox2.TabIndex = 5;
@@ -102,7 +102,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            label3.Location = new Point(101, 19);
+            label3.Location = new Point(107, 25);
             label3.Name = "label3";
             label3.Size = new Size(186, 21);
             label3.TabIndex = 6;
@@ -114,7 +114,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(401, 220);
+            ClientSize = new Size(377, 220);
             Controls.Add(label3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -124,6 +124,7 @@
             Controls.Add(button1);
             DoubleBuffered = true;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "教育";
             Load += Form1_Load;
             ResumeLayout(false);
