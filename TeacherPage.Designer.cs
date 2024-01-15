@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherPage));
             button1 = new Button();
             groupBox1 = new GroupBox();
+            label8 = new Label();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
             label6 = new Label();
             comboBox5 = new ComboBox();
             label3 = new Label();
@@ -44,26 +47,23 @@
             dateTimePicker1 = new DateTimePicker();
             richTextBox1 = new RichTextBox();
             comboBox2 = new ComboBox();
+            groupBox4 = new GroupBox();
+            label9 = new Label();
+            button5 = new Button();
             groupBox3 = new GroupBox();
             label4 = new Label();
             button4 = new Button();
             comboBox1 = new ComboBox();
             button3 = new Button();
             label5 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
-            label8 = new Label();
-            label9 = new Label();
-            button5 = new Button();
-            groupBox4 = new GroupBox();
             groupBox5 = new GroupBox();
-            button6 = new Button();
-            button7 = new Button();
             button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox3.SuspendLayout();
             groupBox5.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,6 +97,31 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "添加课程";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(24, 116);
+            label8.Name = "label8";
+            label8.Size = new Size(32, 17);
+            label8.TabIndex = 12;
+            label8.Text = "时间";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(59, 73);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(127, 23);
+            dateTimePicker3.TabIndex = 11;
+            dateTimePicker3.Value = new DateTime(2024, 1, 8, 0, 0, 0, 0);
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker2.Location = new Point(59, 113);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(127, 23);
+            dateTimePicker2.TabIndex = 5;
             // 
             // label6
             // 
@@ -224,6 +249,34 @@
             comboBox2.TabIndex = 5;
             comboBox2.Text = "请选择课程";
             // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(label9);
+            groupBox4.Controls.Add(button5);
+            groupBox4.Location = new Point(13, 193);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(184, 42);
+            groupBox4.TabIndex = 5;
+            groupBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(6, 16);
+            label9.Name = "label9";
+            label9.Size = new Size(80, 17);
+            label9.TabIndex = 7;
+            label9.Text = "尚未选择文件";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(103, 12);
+            button5.Name = "button5";
+            button5.Size = new Size(70, 26);
+            button5.TabIndex = 7;
+            button5.Text = "选择文件";
+            button5.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             groupBox3.BackColor = Color.Transparent;
@@ -283,59 +336,6 @@
             label5.Size = new Size(0, 17);
             label5.TabIndex = 4;
             // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.Location = new Point(59, 113);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(127, 23);
-            dateTimePicker2.TabIndex = 5;
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.Location = new Point(59, 73);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(127, 23);
-            dateTimePicker3.TabIndex = 11;
-            dateTimePicker3.Value = new DateTime(2024, 1, 8, 0, 0, 0, 0);
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(24, 116);
-            label8.Name = "label8";
-            label8.Size = new Size(32, 17);
-            label8.TabIndex = 12;
-            label8.Text = "时间";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(6, 16);
-            label9.Name = "label9";
-            label9.Size = new Size(80, 17);
-            label9.TabIndex = 7;
-            label9.Text = "尚未选择文件";
-            // 
-            // button5
-            // 
-            button5.Location = new Point(103, 12);
-            button5.Name = "button5";
-            button5.Size = new Size(70, 26);
-            button5.TabIndex = 7;
-            button5.Text = "选择文件";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(label9);
-            groupBox4.Controls.Add(button5);
-            groupBox4.Location = new Point(13, 193);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(184, 42);
-            groupBox4.TabIndex = 5;
-            groupBox4.TabStop = false;
-            // 
             // groupBox5
             // 
             groupBox5.BackColor = Color.Transparent;
@@ -349,14 +349,14 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "信息查询";
             // 
-            // button6
+            // button8
             // 
-            button6.Location = new Point(22, 23);
-            button6.Name = "button6";
-            button6.Size = new Size(96, 28);
-            button6.TabIndex = 0;
-            button6.Text = "查询所有学生";
-            button6.UseVisualStyleBackColor = true;
+            button8.Location = new Point(22, 91);
+            button8.Name = "button8";
+            button8.Size = new Size(96, 28);
+            button8.TabIndex = 2;
+            button8.Text = "修改账户密码";
+            button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -367,14 +367,14 @@
             button7.Text = "工资查询";
             button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // button6
             // 
-            button8.Location = new Point(22, 91);
-            button8.Name = "button8";
-            button8.Size = new Size(96, 28);
-            button8.TabIndex = 2;
-            button8.Text = "修改账户密码";
-            button8.UseVisualStyleBackColor = true;
+            button6.Location = new Point(22, 23);
+            button6.Name = "button6";
+            button6.Size = new Size(96, 28);
+            button6.TabIndex = 0;
+            button6.Text = "查询所有学生";
+            button6.UseVisualStyleBackColor = true;
             // 
             // TeacherPage
             // 
@@ -382,23 +382,24 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(732, 399);
+            ClientSize = new Size(1014, 399);
             Controls.Add(groupBox5);
             Controls.Add(label5);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TeacherPage";
             Text = "TeacherPage";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             groupBox5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

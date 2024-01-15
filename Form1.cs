@@ -11,7 +11,7 @@ namespace WinFormsApp2_C_
         public Form1()
         {
             InitializeComponent();
-            
+
             //窗体居中 
             this.StartPosition = FormStartPosition.CenterScreen;
         }
@@ -23,8 +23,8 @@ namespace WinFormsApp2_C_
         string connectionString = "server=47.113.204.102;database=db;uid=db;password=db123456";
         private void button1_Click(object sender, EventArgs e)
         {
-            TeacherPage Ft = new TeacherPage();
-            Ft.Show();
+            //TeacherPage Ft = new TeacherPage();
+            //Ft.Show();
 
             string username = textBox1.Text;
             string password = textBox2.Text;
@@ -36,7 +36,7 @@ namespace WinFormsApp2_C_
                     connection.Open();
 
                     // 创建 SQL 查询
-                    string query = "SELECT Ugroup FROM User WHERE Uname = @username AND Upw = @password";
+                    string query = "SELECT Ugroup FROM User WHERE Uid = @username AND Upw = @password";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
@@ -52,6 +52,28 @@ namespace WinFormsApp2_C_
 
                                 // 在这里执行您的逻辑，例如设置用户组别、加载权限等
                                 MessageBox.Show("登录成功，用户组别：" + userGroup);
+
+                                //跳转窗口
+                                if (userGroup == "admin")
+                                {
+                                    AdminPage AP = new AdminPage();
+                                    AP.Show();
+                                    //this.Visible = false;
+                                }
+                                else if (userGroup == "student")
+                                {
+                                    StudentPage SP = new StudentPage();
+                                    SP.Show();
+                                    //this.Visible = false;
+                                }
+                                else if (userGroup == "teacher")
+                                {
+                                    TeacherPage TP = new TeacherPage();
+                                    TP.Show();
+                                    //this.Visible = false;
+                                }
+
+
                             }
                             else
                             {
@@ -60,7 +82,6 @@ namespace WinFormsApp2_C_
                             }
                         }
                     }
-
 
 
 
@@ -77,6 +98,12 @@ namespace WinFormsApp2_C_
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            reg RP = new reg();
+            RP.Show();
         }
     }
 }

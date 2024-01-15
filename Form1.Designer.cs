@@ -36,13 +36,14 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label3 = new Label();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(203, 144);
+            button1.Location = new Point(194, 147);
             button1.Name = "button1";
-            button1.Size = new Size(84, 37);
+            button1.Size = new Size(84, 47);
             button1.TabIndex = 0;
             button1.Text = "登录";
             button1.UseVisualStyleBackColor = true;
@@ -50,13 +51,14 @@
             // 
             // button2
             // 
-            button2.Location = new Point(81, 144);
+            button2.Location = new Point(104, 147);
             button2.Name = "button2";
-            button2.Size = new Size(84, 37);
+            button2.Size = new Size(84, 23);
             button2.TabIndex = 1;
             button2.TabStop = false;
             button2.Text = "注册";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -108,6 +110,15 @@
             label3.TabIndex = 6;
             label3.Text = "欢迎使用教育管理系统！";
             // 
+            // button3
+            // 
+            button3.Location = new Point(105, 171);
+            button3.Name = "button3";
+            button3.Size = new Size(83, 23);
+            button3.TabIndex = 7;
+            button3.Text = "忘记密码";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -115,6 +126,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(377, 220);
+            Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -123,9 +135,10 @@
             Controls.Add(button2);
             Controls.Add(button1);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "教育";
+            Text = "教学管理系统";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -140,5 +153,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label3;
+        private Button button3;
     }
 }
